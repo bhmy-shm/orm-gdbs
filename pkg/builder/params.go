@@ -1,6 +1,7 @@
 package builder
 
 import (
+	"github.com/bhmy-shm/orm-gdbs/pbfiles"
 	"google.golang.org/protobuf/types/known/structpb"
 )
 

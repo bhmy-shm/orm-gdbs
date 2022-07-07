@@ -3,6 +3,7 @@ package builder
 import (
 	"context"
 	"fmt"
+	"github.com/bhmy-shm/orm-gdbs/pbfiles"
 	"github.com/mitchellh/mapstructure"
 	"google.golang.org/grpc"
 	"log"
@@ -70,6 +71,7 @@ func (this *Txapi) Query(apiname string, paramBuilder *ParamBuilder, out interfa
 	}
 	return nil
 }
+
 func (this *Txapi) QueryForModel(apiname string, paramBuilder *ParamBuilder, out interface{}) error {
 	err := this.client.Send(&pbfiles.TxRequest{Api: apiname, Params: paramBuilder.Build(), Type: "query"})
 	// 对于查询，如果不出错，会返回一个map   其中key=query    值是查询结果
