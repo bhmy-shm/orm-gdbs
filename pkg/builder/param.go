@@ -9,3 +9,7 @@ func Test() {
 func TestBuilder() {
 	fmt.Println("开始编译sdk")
 }
+
+func TestZX() {
+	fmt.Println("ZX-tag")
+}
