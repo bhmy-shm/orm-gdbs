@@ -33,7 +33,7 @@ func (this *ApiBuilder) Invoke(ctx context.Context, paramBuilder *ParamBuilder,
 			return err
 		}
 		if out != nil {
-			return mapstructure.Decode(helpers.PbstructsToMapList(rsp.GetResult()), out)
+			return mapstructure.WeakDecode(helpers.PbstructsToMapList(rsp.GetResult()), out)
 		}
 		return nil
 	} else {
@@ -51,7 +51,7 @@ func (this *ApiBuilder) Invoke(ctx context.Context, paramBuilder *ParamBuilder,
 			} else {
 				m = map[string]interface{}{"_RowsAffected": rsp.RowAffected}
 			}
-			return mapstructure.Decode(m, out)
+			return mapstructure.WeakDecode(m, out)
 		}
 		return nil
 	}
