@@ -13,3 +13,7 @@ func TestBuilder() {
 func TestZX() {
 	fmt.Println("ZX-tag")
 }
+
+func TestThree() {
+	fmt.Println("three")
+}
