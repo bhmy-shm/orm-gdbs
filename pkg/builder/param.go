@@ -1,7 +1,7 @@
-package main
+package builder
 
 import "fmt"
 
-func main() {
+func Test() {
 	fmt.Println("this is dbsdk")
 }
