@@ -1,7 +1,6 @@
 package builder
 
 import (
-	"github.com/bhmy-shm/dbsdk/pbfiles"
 	"google.golang.org/protobuf/types/known/structpb"
 )
 

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/bhmy-shm/dbsdk/examples"
+	"github.com/bhmy-shm/orm-gdbs/examples"
 	"sync"
 )
 

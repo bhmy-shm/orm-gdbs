@@ -2,8 +2,8 @@ package builder
 
 import (
 	"context"
-	"github.com/bhmy-shm/dbsdk/pbfiles"
-	"github.com/bhmy-shm/dbsdk/pkg/helpers"
+	"github.com/bhmy-shm/orm-gdbs/pbfiles"
+	"github.com/bhmy-shm/orm-gdbs/pkg/helpers"
 	"github.com/mitchellh/mapstructure"
 	"log"
 )
