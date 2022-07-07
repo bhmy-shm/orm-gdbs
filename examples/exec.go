@@ -3,8 +3,8 @@ package examples
 import (
 	"context"
 	"fmt"
-	"github.com/bhmy-shm/dbsdk/pbfiles"
-	"github.com/bhmy-shm/dbsdk/pkg/builder"
+	"github.com/bhmy-shm/orm-gdbs/pbfiles"
+	"github.com/bhmy-shm/orm-gdbs/pkg/builder"
 	"google.golang.org/grpc"
 	"log"
 )
@@ -18,7 +18,7 @@ type UserAddResult struct {
 func ExecTest() {
 
 	client, _ := grpc.DialContext(context.Background(),
-		"localhost:8080",
+		"localhost:8082",
 		grpc.WithInsecure(),
 	)
 	c := pbfiles.NewDBServiceClient(client)

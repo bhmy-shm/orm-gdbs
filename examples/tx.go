@@ -3,7 +3,7 @@ package examples
 import (
 	"context"
 	"fmt"
-	"github.com/bhmy-shm/dbsdk/pkg/builder"
+	"github.com/bhmy-shm/orm-gdbs/pkg/builder"
 	"google.golang.org/grpc"
 	"log"
 )
