@@ -32,8 +32,11 @@ func (this *ApiBuilder) Invoke(ctx context.Context, paramBuilder *ParamBuilder,
 			log.Println(err)
 			return err
 		}
+		log.Println("rsp=", rsp)
+		mapList := helpers.PbstructsToMapList(rsp.GetResult())
+		log.Println(mapList)
 		if out != nil {
-			return mapstructure.WeakDecode(helpers.PbstructsToMapList(rsp.GetResult()), out)
+			return mapstructure.WeakDecode(mapList, out)
 		}
 		return nil
 	} else {
