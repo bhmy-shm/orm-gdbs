@@ -50,9 +50,9 @@ func (this *ApiBuilder) Invoke(ctx context.Context, paramBuilder *ParamBuilder,
 			var m map[string]interface{}
 			if rsp.Select != nil {
 				m = rsp.Select.AsMap()
-				m["_RowsAffected"] = rsp.RowAffected
+				m["_RowsAffected"] = rsp.RowsAffected
 			} else {
-				m = map[string]interface{}{"_RowsAffected": rsp.RowAffected}
+				m = map[string]interface{}{"_RowsAffected": rsp.RowsAffected}
 			}
 			return mapstructure.WeakDecode(m, out)
 		}
